@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    <header>
+        <h1>Car Dealership Blog</h1>
+      </header>
+      <section id="blog-container">
+        <article class="blog-post" data-id="1">
+          <h2>5 Tips for Maintaining Your Car</h2>
+          <p>Regular maintenance can extend the life of your car...</p>
+          <img src="bmw-3-series.jpg" alt="Car Maintenance Tips" class="post-image">
+          <h3>The BMW M3: A Legacy of Performance and Precision</h3>
+          <p>
+            The BMW M3 is an icon in the world of performance sedans, combining luxury, precision engineering, and thrilling performance. Introduced in 1986 as a high-performance version of the 3 Series, 
+            the M3 has since evolved into a benchmark for sports cars.
+             Let's explore its history, design, performance, and why it remains a favorite among car enthusiasts.
+          </p>
+          <h3>The Birth of a Legend</h3>
+         <p>
+            The BMW M3’s story began with the introduction of the E30 M3 in 1986, 
+            a car that was initially designed to meet the requirements for Group A racing.
+             The E30 M3 was a track-focused version of the 3 Series, powered by a 2.3-liter four-cylinder engine capable of producing 192 horsepower. 
+             Despite its modest engine size, the E30 was an agile, lightweight machine with superb handling, 
+             and it quickly gained recognition for its motorsport success. The M3 soon became a symbol of performance,
+              with its aggressive stance and race-car-inspired design.
+         </p>
+         <h3>Design and Engineering</h3>
+         <article>
+            The design of the BMW M3 has always been bold and purposeful. 
+            Each generation features a distinctive, aggressive stance, with wide fenders, a lowered suspension, and aerodynamically optimized features like larger front air intakes and rear diffusers. 
+            The M3’s design isn’t just about looks; every element serves a functional purpose to improve airflow, reduce drag, and optimize cooling for the engine and brakes.
+The interior of the M3 balances sportiness and luxury. With racing-inspired features like supportive bucket seats, a low driving position, and a driver-focused layout, the M3 offers an engaging experience. 
+The latest models, including the G80, offer high-end materials, advanced technology, and customizable options to meet the demands of the modern driver, from the intuitive iDrive infotainment system to the digital display cluster.
+         </article>
+         <h3>Performance: Power and Precision</h3>
+         <article>
+            The BMW M3 has always been about performance. 
+            It’s a car that is designed to perform both on the track and on the road, offering a driving experience that is both exhilarating and refined. 
+            Powered by high-output engines, each M3 generation has pushed the envelope in terms of power, with the latest G80 M3 producing up to 503 horsepower from its 3.0-liter twin-turbo inline-six engine.
+What sets the M3 apart from many competitors is its precise handling. 
+With a finely tuned suspension, rear-wheel drive (with optional all-wheel drive), and a perfect balance of power and weight, the M3 is an incredibly agile car. Whether it’s a tight, twisty mountain road or a high-speed track, the M3 feels composed and responsive. The M xDrive all-wheel-drive system in the latest model provides better traction and stability, making the M3 more versatile in a variety of conditions while still maintaining the raw driving feel that M3 owners crave.
+         </article>
+         <h3>Why the BMW M3 Remains a Favorite</h3>
+         <article>
+            The BMW M3’s enduring appeal lies in its perfect balance of power, precision, and luxury. 
+            Over the years, it has maintained its status as a driver’s car—one that offers a visceral connection between the machine and the road. Unlike many other performance cars, the M3 is also a practical vehicle, capable of serving as a comfortable daily driver while delivering thrilling performance when called upon.
+For enthusiasts, 
+the M3 represents the ideal combination of cutting-edge technology, precision engineering, and raw driving excitement. Whether you’re a purist who loves the naturally aspirated engines of the past or someone who appreciates the power and efficiency of modern turbocharged engines, the M3 delivers on all fronts.
+         </article>
+          <div class="actions">
+            <button class="like-btn">👍 <span class="like-count">0</span></button>
+            <button class="dislike-btn">👎 <span class="dislike-count">0</span></button>
+          </div>
+          <div class="comments-section">
+            <h3>Comments</h3>
+            <ul class="comments-list"></ul>
+            <textarea class="comment-input" placeholder="Write a comment..."></textarea>
+            <button class="add-comment-btn">Add Comment</button>
+        </div>
+        </article>   
+    </section>
+    <script src="script.js"></script>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+header {
+  background-color: red;
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+#blog-container {
+  padding: 5px;
+}
+
+.blog-post {
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgb(228, 10, 10);
+}
+
+.actions {
+  margin: 10px 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 17px;
+  margin-right: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.comments-section {
+  margin-top: 20px;
+  border-top: 1px solid black;
+  padding-top: 10px;
+}
+
+.post-image {
+  width: 60%; 
+  height: auto; 
+  margin-bottom: 15px; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+    </style>
+    <script>  
+document.querySelectorAll('.blog-post').forEach(post => {
+  const likeBtn = post.querySelector('.like-btn');
+  const dislikeBtn = post.querySelector('.dislike-btn');
+
+  likeBtn.addEventListener('click', () => {
+    const likeCount = post.querySelector('.like-count');
+    likeCount.textContent = parseInt(likeCount.textContent) + 1;
+  });
+
+  dislikeBtn.addEventListener('click', () => {
+    const dislikeCount = post.querySelector('.dislike-count');
+    dislikeCount.textContent = parseInt(dislikeCount.textContent) + 1;
+  });
+});
+
+document.querySelectorAll('.add-comment-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const post = button.closest('.blog-post');
+    const commentInput = post.querySelector('.comment-input');
+    const commentsList = post.querySelector('.comments-list');
+
+    const commentText = commentInput.value.trim();
+    if (commentText) {
+      const newComment = document.createElement('li');
+      newComment.textContent = commentText;
+      commentsList.appendChild(newComment);
+      commentInput.value = ''; 
+    }
+  });
+});
+const loadMoreBtn = document.getElementById('load-more-btn');
+loadMoreBtn.addEventListener('click', () => {
+  const blogContainer = document.getElementById('blog-container');
+  const newPost = document.createElement('article');
+  newPost.classList.add('blog-post');
+  newPost.setAttribute('data-id', Date.now());
+  newPost.innerHTML = `
+    <h2>New Blog Post</h2>
+    <p>This is a new blog post added dynamically...</p>
+    <div class="actions">
+      <button class="like-btn">👍 <span class="like-count">0</span></button>
+      <button class="dislike-btn">👎 <span class="dislike-count">0</span></button>
+    </div>
+    <div class="comments-section">
+      <h3>Comments</h3>
+      <ul class="comments-list"></ul>
+      <textarea class="comment-input" placeholder="Write a comment..."></textarea>
+      <button class="add-comment-btn">Add Comment</button>
+    </div>
+  `;
+  const likeBtn = newPost.querySelector('.like-btn');
+  const dislikeBtn = newPost.querySelector('.dislike-btn');
+  const addCommentBtn = newPost.querySelector('.add-comment-btn');
+  likeBtn.addEventListener('click', () => {
+    const likeCount = newPost.querySelector('.like-count');
+    likeCount.textContent = parseInt(likeCount.textContent) + 1;
+  });
+  dislikeBtn.addEventListener('click', () => {
+    const dislikeCount = newPost.querySelector('.dislike-count');
+    dislikeCount.textContent = parseInt(dislikeCount.textContent) + 1;
+  });
+  addCommentBtn.addEventListener('click', () => {
+    const commentInput = newPost.querySelector('.comment-input');
+    const commentsList = newPost.querySelector('.comments-list');
+    const commentText = commentInput.value.trim();
+    if (commentText) {
+      const newComment = document.createElement('li');
+      newComment.textContent = commentText;
+      commentsList.appendChild(newComment);
+      commentInput.value = '';
+    }
+  });
+  blogContainer.appendChild(newPost);
+});
+</script>
+ </html>
+
