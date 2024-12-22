@@ -12,7 +12,7 @@
   }
   
   #header-bar {
-    background-color: #e60000;
+    background-color: #e40b0b;
     padding: 20px 0;
     text-align: center;
     position: fixed; /* Fixing the header to the top */
@@ -102,12 +102,12 @@
     cursor: pointer;
     border: 2px solid #e60000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s;
+    transition: all 0.4s;
     margin-top: 20px;
   }
   
   #test-drive-btn:hover {
-    background-color: #cc0000;
+    background-color: #ca0707;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
   }
@@ -131,7 +131,7 @@
   }
   
   th {
-    background-color: #e60000;
+    background-color: #e60505;
     color: white;
   }
   
