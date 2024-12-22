@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Dealership Hub</title>
+  <link rel="stylesheet" href="catalogue.css">
+</head>
+<body>
+  <header>
+    <div id="header-bar">
+      <h1>Car Dealership Hub</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Listings</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div id="car-container">
+      <div id="car-info">
+        <h2 id="car-name">Car Name</h2>
+        <div id="car-details">
+          <p><strong>Details:</strong></p>
+          <ul>
+            <li><strong>Color:</strong> <span id="car-color">N/A</span></li>
+            <li><strong>Year:</strong> <span id="car-year">N/A</span></li>
+            <li><strong>Mileage:</strong> <span id="car-mileage">N/A</span></li>
+            <li><strong>Fuel Type:</strong> <span id="car-fuel">N/A</span></li>
+            <li><strong>Price:</strong> <span id="car-price">$0</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="buttons">
+        <button id="prev-btn" class="fancy-btn">Prev</button>
+        <button id="next-btn" class="fancy-btn">Next</button>
+      </div>
+
+      <button id="test-drive-btn" class="fancy-btn-red">Book Test Drive</button>
+
+      <table id="comparison-table">
+        <thead>
+          <tr>
+            <th>Car</th>
+            <th>Price</th>
+            <th>Year</th>
+            <th>Fuel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dynamic car comparison will be inserted here -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Car Dealership Hub</p>
+  </footer>
+
+  <script src="catalogue.js"></script>
+</body>
+</html>
