@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-compatible" content="ie=edge">
+        <meta name="Description" content="Enter your Description here"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+       
+        <style>
+            td>img{
+                width: 100%;
+                height: 500px;
+                object-fit: contain ;
+            }
+        </style>
+         <title>Comparison</title>
+
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+          integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+          <link rel="stylesheet" href="style.css">
+                
+
+
+
+
+    </head>
+
+        <body>
+
+               <!--  Ribbon -->
+    <header>
+        <div id="rippon">
+            <nav>
+                <ul>
+                    <li id="liNoBorder"><a href="#" >TRACK ORDER</a></li>
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">CART(0)</a></li>
+                    <li><a href="#">CHECKOUT</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+
+        <!-- NavBar-->
+        <nav id="navbar">
+            <div class="logo">
+                <img src="pictures/logo.png" alt="Company Logo">
+            </div>
+            <ul>
+                <li><a href="../homepage/homepage.html">HOME</a></li>
+                <li><a href="../CarListing/car-listings.html">STORE</a></li>
+                <li><a href="../comparison/comparison.html">COMPARE CARS</a></li>
+                <li><a href="../BlogPage/index.html">OUR BLOG</a></li>
+                <li><a href="../contactUs/contactUs.html">CONTACT US</a></li> 
+              </ul>
+        </nav>
+    </header>
+
+            <h1 class="display-5 my-5">compare page </h1>
+
+             <div class="container">
+                <div class="col-md-9 auto">
+                    <table class="table">
+                        <tr class="bg-light">
+                            <th>Select Brand</th>
+                            <th>
+                                <select class="from-conrtol" id="select1" onchange="item1(this.value)">
+                                    <option value="0">-- Select Your Car --</option>
+                                </select>
+                            </th>
+                            
+                            <th>
+                                <select class="from-conrtol" id="select2" onchange="item2(this.value)">
+                                    <option value="0">-- Select Your Car --</option>
+                                </select>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Car Image</th>
+                            <td><img src="search-car-sign-vector-magnifying-600nw-538584514.webp" id="img1" alt=""></td>
+                            <td><img src="search-car-sign-vector-magnifying-600nw-538584514.webp" id="img2" alt=""></td>
+                        
+                        </tr>
+                        
+                        <tr>
+                            <th>Car Description</th>
+                            <td id="desc1">------</td>
+                            <td id="desc2">------</td>
+                        </tr>
+                        <tr>
+                            <th>Car Color</th>
+                            <td id="Color1">------</td>
+                            <td id="Color2">------</td>
+                        </tr>
+                        <tr>
+                            <th>car price</th>
+                            <td id="price1">------</td>
+                            <td id="price2">------</td>
+                        </tr>
+        
+        
+                    </table>
+         
+                </div>
+             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button style="border-radius: 100%; color: red;"><i class="fa-brands fa-facebook"></i></button>
+<button style="border-radius: 100%; color: red;"><i class="fa-brands fa-instagram"></i></button>
+<button style="border-radius: 100%; color: red;"><i class="fa-brands fa-x-twitter"></i></button>
+
+
+
+        </body>
+</html>
+
+
+<script src="data.js"></script>
+<script>
+    for(var i=1; i < car.length; i++){
+     document.getElementById("select1").innerHTML +=`
+      <option value="${i}">${car[i].title}</option>
+     `;
+     document.getElementById("select2").innerHTML +=`
+      <option value="${i}">${car[i].title}</option>
+     `;
+    }
+    function item1(a){
+       
+        var select2 = document.getElementById("select2").value;
+        if(a != select2){
+            document.getElementById("img1").src=car[a].Image
+            document.getElementById("desc1").innerHTML=car[a].description
+            document.getElementById("Color1").innerHTML=car[a].color
+            document.getElementById("price1").innerHTML=car[a].price
+        }else{
+            document.getElementById("img1").src=car[0].Image 
+            document.getElementById("desc1").innerHTML=""
+            document.getElementById("Color1").innerHTML=""
+            document.getElementById("price1").innerHTML=""
+        }
+        
+    }
+    
+    function item2(a){
+        var select1 = document.getElementById("select1").value;
+        if(a != select1){
+            document.getElementById("img2").src=car[a].Image
+            document.getElementById("desc2").innerHTML=car[a].description
+            document.getElementById("Color2").innerHTML=car[a].color
+            document.getElementById("price2").innerHTML=car[a].price
+        }else{
+            document.getElementById("img2").src=car[0].Image 
+            document.getElementById("desc2").innerHTML=""
+            document.getElementById("Color2").innerHTML=""
+            document.getElementById("price2").innerHTML=""
+        }
+    }
+</script>
+    
